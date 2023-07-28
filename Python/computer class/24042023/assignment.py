@@ -1,0 +1,9 @@
+a=15
+b=a
+print(b)
+b+=a
+print(b)
+b-=a
+print(b)
+b/=a
+print(b)

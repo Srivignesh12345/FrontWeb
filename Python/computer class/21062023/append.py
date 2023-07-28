@@ -1,0 +1,6 @@
+data=open("Vicky.txt","a")
+print(data.mode)
+#print(data.read())
+data.write("  overloaded")
+print("Append")
+data.close()
