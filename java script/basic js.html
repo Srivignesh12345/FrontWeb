@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myName=prompt("Enter your name","")
+        let myBalance=prompt("Enter your Bank Balance:","")
+        myBalance=parseFloat(myBalance)
+        // var myBalance=parseFloat(prompt("Enter the current Balance:",""))
+        var consent=confirm("Do you wish to print your information")
+        /*
+        if(consent==true){
+            document.writeln("Welcome"+myName+" "+typeof(myName))
+            document.writeln("your current balance is"+myBalance+" "+typeof(myBalance))
+        }
+        else{
+            document.writeln("User has refused to show Information");
+        }
+        */
+       //(condition)?true block:false block
+       consent?document.writeln("Your Name "+myName+" and your bank balance is"+myBalance):
+       document.writeln("User refused to show")
+    </script>
+</body>
+</html>
