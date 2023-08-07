@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+    <script>
+        let currentUser=""
+        function allow(){
+            currentUser=prompt("enter the user name","")
+            alert(currentUser)
+        }
+
+        function passing(userName){
+        currentUser=userName
+        alert(currentUser)
+        }
+        function perform(alpha,beta,cosmo){
+            alpha>beta&&alpha>cosmo?
+            document.getElementById("text").innerText=alpha+"greater":
+            beta>cosmo?document.getElementById("text").innerText=beta+"greater":
+            document.getElementById("text").innerText=cosmo+"greater"
+        }
+        function receiveBack(){
+            var hi=document.getElementById("shade")
+            hi.style.backgroundColor=hi.value
+            hi.style.boxShadow="20px 20px 20px blue"
+            hi.style.fontSize="40px"
+        }
+    </script>
+</head>
+<body>
+    <p id="text"> Result is</p>
+    <button onclick="allow()">Basic</button>
+    <button onclick="passing('Srivignesh')">Argument</button>
+    <button onclick="perform(53,25,52)">Bigger</button>
+    <input type="text" id="shade" onchange="receiveBack()"/>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Html</title>
+    <script>
+        function alpha() {
+            // alert("entered")
+            var text=document.getElementsByTagName("p") [0].innerText
+            alert(text)
+            var text=document.getElementsByTagName("p") [0].innerText="Srivignesh"
+        }
+        function on(){
+        var alpha=document.getElementById("listing")
+            alpha.style.backgroundColor='blue'
+            alpha.style.color='white'
+            //backgroound color
+        }
+        function off(){
+            var alpha=document.getElementById("listing")
+            alpha.style.backgroundColor='white'
+            alpha.style.color='blue'
+        }
+    </script>
+</head>
+<body>
+    <p onmouseenter="alpha()">Hello there!</p>
+        <ul id="listing" onclick="on()" ondblclick="off()">
+            <li>Django</li>
+            <li>Flask</li>
+            <li>Jinja</li>
+        </ul>
+        <p>Hi there.....</p>
+</body>
+</html>
