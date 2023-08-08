@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>currency converter</title>
+    <title>Currency Converter</title>
     <script>
         function us(){
             var inr=document.getElementById("india").value
@@ -27,22 +27,23 @@
             var inr=parseInt(inr)
             var singapore=parseFloat(singapore)
             var Sgdollars=(inr /singapore)
-            document.getElementById("conversion").value=Sgdollars +"SG Dollars"
+            document.getElementById("conversion").value=Sgdollars +" SG Dollars"
         }
             function china(){
             var inr=document.getElementById("india").value
             var yuan=11.55
-
             var inr=parseInt(inr)
             var yuan=parseFloat(yuan)
             var rupees=(inr/yuan)
-            document.getElementById("conversion").value=rupees+"yuan"
-        }
-
+            document.getElementById("conversion").value=rupees+" yuan"
+        }function reset(){
+        document.getElementById("conversion").value=""
+    }
     </script>
 </head>
 <body>
     <input type="number" id="india" placeholder="Indian currency" onchange="reset()">
+    <br>
     <button onclick="us()">US Dollars</button>
     <button onclick="dubai()">Arabs</button>
     <button onclick="singapore()">SG Dollars</button>
