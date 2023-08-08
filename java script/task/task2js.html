@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency converter</title>
+    <script>
+        function us(){
+            var inr=document.getElementById("india").value
+            var us=82.80
+            var inr=parseInt(inr)
+            var us=parseFloat(us)
+            var dollars=(inr/us)
+            document.getElementById("conversion").value=dollars+" Dollars"
+        }
+        function dubai(){
+            var inr=document.getElementById("india").value
+            var num1=22.55
+            var inr=parseInt(inr)
+            var num1=parseFloat(num1)
+            var arabs=(inr/num1)
+            document.getElementById("conversion").value=arabs+" Arabs"
+        }
+        function singapore(){
+            var inr=document.getElementById("india").value
+            var singapore=61.61
+            var inr=parseInt(inr)
+            var singapore=parseFloat(singapore)
+            var Sgdollars=(inr /singapore)
+            document.getElementById("conversion").value=Sgdollars +"SG Dollars"
+        }
+            function china(){
+            var inr=document.getElementById("india").value
+            var yuan=11.55
+
+            var inr=parseInt(inr)
+            var yuan=parseFloat(yuan)
+            var rupees=(inr/yuan)
+            document.getElementById("conversion").value=rupees+"yuan"
+        }
+
+    </script>
+</head>
+<body>
+    <input type="number" id="india" placeholder="Indian currency" onchange="reset()">
+    <button onclick="us()">US Dollars</button>
+    <button onclick="dubai()">Arabs</button>
+    <button onclick="singapore()">SG Dollars</button>
+    <button onclick="china()">Yuan(china)</button>
+    <output id="conversion"></output>
+</body>
+</html>
