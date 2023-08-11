@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // JSON
+        /*
+        {
+            "key":value
+            "key":{
+                value
+            }
+        }
+        */
+       /*
+       let myAssets=newArray(79,"Srivignesh",8.6,true,{"bike":"Harley davidson","car":1500,"land":[1500,2500,3230]})
+       */
+      let myAssets=[79,"Srivignesh",8.6,true,{"bike":"Harley davidson","car":1500,"land":[1500,2500,3230]}]
+      /*
+      function show(){
+        for(var index=0;index<myAssets;index++){
+            console.log(myAssets[index])
+        }
+      }
+    */
+   const show=()=>{
+    /*
+    for(var index=0;index<myAssets.length;index++){
+        // console.log(myAssets[index])
+        alert(myAssets[index])
+    }
+    */
+   // myassets.map(iterate)
+   var content=""
+   myAssets.map((value,index)=>{
+    content+=value+"<br/>"
+   })
+   document.getElementById("view").innerHTML=content
+   }
+   const iterate=(i,v)=>{
+    console.log(v+" "+i)
+   }
+   const add=()=>{
+    var item=document.getElementById("data").value
+    myAssets.push(item)
+    document.getElementById("view").innerText="Item"+item+"has added to array"
+   }
+   // reading by index
+   const read=()=>{
+    console.log(myAssets.length)
+    var item=document.getElementById("data").value
+    item=parseInt(item)
+    if(item<myAssets.length&&item>-1){
+        document.getElementById("view").innerText="Item is "+myAssets[item]
+    }
+    else{
+        document.getElementById("view").innerText="Invalid Index"
+    }
+    var desired;
+
+    const find=()=>{
+        var data=document.getElementById("data").value
+        position=parseInt(position)
+        desired=position
+    }
+
+    const update=()=>{
+        var data=document.getElementById("data").value
+        myAssets[desired]=data
+    }
+    const erase=()=>{
+        var position=document.getElementById("data").value
+        position=parseInt(position)
+        /*
+        var new Array=myAssets.filter((val,ind)=>{
+            return ind!=position
+        })
+        document.write(newArray)
+        */
+    //    delete by poosition4
+        myAssets=myAssets.filter((val,ind)=>{
+            return ind!=position
+        })
+    }
+   }
+    </script>
+</head>
+<body>
+    <p id="view"></p>
+    <button onclick="show()">View</button>
+    <input type="text" id="data">
+    <button onclick="add()">Adding new Element</button>
+    <button onclick="read()">Read</button>
+    <button onclick="erase()">Delete</button>
+    <button onclick="find()">find</button>
+    <button onclick="update()">update</button>
+</body>
+</html>
