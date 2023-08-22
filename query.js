@@ -21,17 +21,17 @@ $(document).ready(()=>{
         }
 
         // data validation
-        if(!("Sadhasivam").test(Uname)){
+        if(!(/[a-zA-Z]/).test(Uname)){
             $("#errUname").html("<br/>*User Name Mismatch")
             $("#errUname").show()
             valid=false
         }
-        if(!("srikalpana12@").test(pass)){
+        if(!(/(?=.*[0-9])(?=.*[!@#$^])[A-Za-z0-9!@#$^]{8,}/).test(pass)){
             $("#errPass").html("<br/>*Password Mismatch")
             $("#errPass").show()
             valid=false
         }
-        if(user=="Sadhasivam"&&pass=="srikalpana12@")
+        if(Uname=="Sadhasivam"&&pass=="srikalpana12@")
         {
             $("#enter").dblclick(()=>{
                 $(location).prop("href","frames.html")
