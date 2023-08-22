@@ -1,5 +1,5 @@
 $(document).ready(()=>{
-    $("form[name=signin]").submit((eve)=>{
+    $("form[name=signup]").submit((eve)=>{
         eve.preventDefault()
         $("#errUname").hide()
         $("#errPass").hide()
@@ -10,12 +10,12 @@ $(document).ready(()=>{
 
         // form validation
         if(Uname.length==0){
-            $("#errUname").html("<br/>*FirstName shouldn't empty")
+            $("#errUname").html("<br/>FirstName shouldn't empty")
             $("#errUname").show()
             valid=false
         }
         if(pass.length==0){
-            $("#errPass").html("<br/>*Password shouldn't empty")
+            $("#errPass").html("<br/>Password shouldn't empty")
             $("#errPass").show()
             valid=false
         }
@@ -26,7 +26,7 @@ $(document).ready(()=>{
             $("#errUname").show()
             valid=false
         }
-        if(!("srikalpana12@").test(pass)){
+        if(!("srikalpana12@").test(Uname)){
             $("#errPass").html("<br/>*Password Mismatch")
             $("#errPass").show()
             valid=false
@@ -34,7 +34,7 @@ $(document).ready(()=>{
         if(user=="Sadhasivam"&&pass=="srikalpana12@")
         {
             $("#enter").dblclick(()=>{
-                $(location).prop("href","frames.html")
+                $(location).prop("href","/frames.html")
             })
          }
         
